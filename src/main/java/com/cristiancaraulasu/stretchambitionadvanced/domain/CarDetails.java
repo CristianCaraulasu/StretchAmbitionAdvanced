@@ -1,5 +1,6 @@
 package com.cristiancaraulasu.stretchambitionadvanced.domain;
 
+import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NonNull;
@@ -26,10 +27,12 @@ public class CarDetails {
     private String engine;
     @NonNull
     private int startYear;
-    @NonNull
+    //@NonNull - this could be null, because there are some cars that are still in development
     private int endYear;
     @NonNull
-
+    private String engineType;
+    @NotNull
+    private String body;
 
     public CarDetails() {
 
